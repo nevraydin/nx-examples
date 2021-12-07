@@ -1,0 +1,23 @@
+{
+  "root": "libs/mylib2389",
+  "sourceRoot": "libs/mylib2389/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/mylib2389/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/mylib2389"],
+      "options": {
+        "jestConfig": "libs/mylib2389/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
